@@ -31,8 +31,40 @@ public class MyHelloWorldTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testApp1()
     {
         assertTrue( true );
+    }
+    
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp2()
+    {
+    	assertTrue( true );
+    }
+    
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp3()
+    {
+    	assertTrue( true );
+    }
+    
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp4()
+    {
+    	assertTrue( false );
+    }
+    
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp5()
+    {
+    	assertTrue( false );
     }
 }
