@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class HelloWorldTestSuite 
+public class HelloWorldSuiteTest 
     {
     /**
      * Create the test case
