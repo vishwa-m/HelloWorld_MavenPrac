@@ -2,11 +2,8 @@ package com.vnath.maven.hw.test;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Ignore;
 import org.junit.Test;
-
-/*import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;*/
 
 /**
  * Unit test for simple App.
@@ -55,6 +52,7 @@ public class MyHelloWorldTest
      * Rigourous Test :-)
      */
     @Test
+    @Ignore("Ignoring temporarily")
     public void testApp3()
     {
     	assertTrue( true );
