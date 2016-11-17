@@ -43,8 +43,8 @@
                   <filtering>true</filtering>
                 </resource>
               </resources>              
-            </configuration>            
-          </execution>
+            </configuration>
+          </execution> 
         </executions>
       </plugin>
     </plugins>
