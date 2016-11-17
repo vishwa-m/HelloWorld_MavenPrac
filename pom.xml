@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <properties>
+  	<group_id>HCL</group_id>
+  	<artifact_id>HW_Maven</artifact_id>
+  	<version_name>0.0.1-SNAPSHOT</version_name>
+  </properties>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${group_id}</groupId>
+  <artifactId>${artifact_id}</artifactId>
+  <version>${version_name}</version>
+  <!-- <name>HelloWorldProject</name> -->
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <!-- here the phase you need -->
+            <phase>package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>D:/Users/manchalav/Desktop</outputDirectory>
+              <resources>          
+                <resource>
+                  <include>*.jar</include>
+                  <directory>target</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>
