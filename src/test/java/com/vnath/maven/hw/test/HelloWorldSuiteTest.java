@@ -34,6 +34,7 @@ public class HelloWorldSuiteTest
      * Rigourous Test :-)
      */
     @Test
+    @Ignore("Ignoring temporarily")
     public void testApp1()
     {
         assertTrue( true );
@@ -43,6 +44,7 @@ public class HelloWorldSuiteTest
      * Rigourous Test :-)
      */
     @Test
+    @Ignore("Ignoring temporarily")
     public void testApp2()
     {
     	assertTrue( true );
@@ -62,6 +64,7 @@ public class HelloWorldSuiteTest
      * Rigourous Test :-)
      */
     @Test
+    @Ignore("Ignoring temporarily")
     public void testApp4()
     {
     	assertTrue( true );
@@ -71,6 +74,7 @@ public class HelloWorldSuiteTest
      * Rigourous Test :-)
      */
     @Test
+    @Ignore("Ignoring temporarily")
     public void testApp5()
     {
     	assertTrue( true );
