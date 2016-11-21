@@ -5,6 +5,7 @@
 		<group_id>HCL</group_id>
 		<artifact_id>HW_Maven</artifact_id>
 		<version_name>0.0.1-SNAPSHOT</version_name>
+		<reports_plugin_version>2.10.4</reports_plugin_version>
 	</properties>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -93,7 +94,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.10.4</version>
+				<version>${reports_plugin_version}</version>
 			</plugin>
 		</plugins>
 	</reporting>
