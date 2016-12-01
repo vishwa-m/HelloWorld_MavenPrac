@@ -96,6 +96,13 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${reports_plugin_version}</version>
 				
+				<!-- Below configuration is not working -->
+				<!-- <configuration>
+					<reportOutputDirectory>D:\Users\manchalav\Desktop</reportOutputDirectory>
+					<destDir>myapidocs</destDir>
+				</configuration> 
+				-->
+				
 				<configuration>
 	        		<destDir>javadocs</destDir>
 				</configuration>
