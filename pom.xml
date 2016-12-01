@@ -25,7 +25,6 @@
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.0.1</version>
@@ -88,13 +87,19 @@
 		</profile>
 	</profiles>
 	 -->
-	 
 	<reporting>
+		<!-- Below element is used to change the output directory for all the generated files -->
+		<outputDirectory>D:\Users\manchalav\Documents\Reports_Maven</outputDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${reports_plugin_version}</version>
+				
+				<configuration>
+	        		<destDir>javadocs</destDir>
+				</configuration>
+				
 			</plugin>
 		</plugins>
 	</reporting>
