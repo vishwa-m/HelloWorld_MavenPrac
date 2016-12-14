@@ -49,7 +49,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<!-- The below element executes a test suite -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -60,54 +60,35 @@
 					</includes>
 				</configuration>
 			</plugin>
-			 
+
 		</plugins>
 	</build>
-	
-	<!-- The below profiles element is used to run the tests in executing tests of specified categories -->
-	<!--
-	<profiles>
-		<profile>
-			<id>FastTests</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>
-							<groups>com.vnath.maven.hw.test.categories.FastRunningTests</groups>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>			
-		</profile>
-	</profiles>
-	 -->
+
+	<!-- The below profiles element is used to run the tests in executing tests 
+		of specified categories -->
+	<!-- <profiles> <profile> <id>FastTests</id> <activation> <activeByDefault>true</activeByDefault> 
+		</activation> <build> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-surefire-plugin</artifactId> <configuration> <groups>com.vnath.maven.hw.test.categories.FastRunningTests</groups> 
+		</configuration> </plugin> </plugins> </build> </profile> </profiles> -->
 	<reporting>
-		<!-- Below element is used to change the output directory for all the generated files -->
-		<outputDirectory>D:\Users\manchalav\Documents\Reports_Maven</outputDirectory>
+		<!-- Below element is used to change the output directory for all the generated 
+			reporting related files -->
+		<!-- <outputDirectory>D:\Users\manchalav\Documents\Reports_Maven</outputDirectory> -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>${reports_plugin_version}</version>
-				
+
 				<!-- Below configuration is not working -->
-				<!-- <configuration>
-					<reportOutputDirectory>D:\Users\manchalav\Desktop</reportOutputDirectory>
-					<destDir>myapidocs</destDir>
-				</configuration> 
-				-->
-				
+				<!-- <configuration> <reportOutputDirectory>D:\Users\manchalav\Desktop</reportOutputDirectory> 
+					<destDir>myapidocs</destDir> </configuration> -->
+
 				<configuration>
-	        		<destDir>javadocs</destDir>
+					<destDir>javadocs</destDir>
 				</configuration>
-				
-			</plugin>
+			</plugin> 
+
 		</plugins>
 	</reporting>
 
