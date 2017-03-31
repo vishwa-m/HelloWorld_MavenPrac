@@ -92,4 +92,13 @@
 		</plugins>
 	</reporting>
 
+	<!-- The below configuration is for artifact deployment to Nexus repository-vishwarepo1 -->
+	<distributionManagement>
+		<repository>
+			<id>vishwaartifactrepo</id><!-- This id should match with the corresponding server element id provided in settings.xml file -->
+			<name>vishwarepository</name>
+			<url>http://localhost:8081/repository/vishwarepo1/</url>
+		</repository>
+	</distributionManagement> 
+
 </project>
