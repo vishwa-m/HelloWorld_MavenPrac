@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<group_id>HCL</group_id>
+		<group_id>Argha</group_id>
 		<artifact_id>HW_Maven</artifact_id>
-		<version_name>0.0.1-SNAPSHOT</version_name>
+		<version_name>1.0</version_name>
 		<reports_plugin_version>2.10.4</reports_plugin_version>
 	</properties>
 
