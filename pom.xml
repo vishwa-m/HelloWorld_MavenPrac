@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<group_id>Argha</group_id>
+		<group_id>Prac2</group_id>
 		<artifact_id>HW_Maven</artifact_id>
 		<version_name>1.0</version_name>
 		<reports_plugin_version>2.10.4</reports_plugin_version>
@@ -87,7 +87,7 @@
 				<configuration>
 					<destDir>javadocs</destDir>
 				</configuration>
-			</plugin> 
+			</plugin>
 
 		</plugins>
 	</reporting>
@@ -95,10 +95,11 @@
 	<!-- The below configuration is for artifact deployment to Nexus repository-vishwarepo1 -->
 	<distributionManagement>
 		<repository>
-			<id>vishwaartifactrepo</id><!-- This id should match with the corresponding server element id provided in settings.xml file -->
-			<name>vishwarepository</name>
-			<url>http://localhost:8081/repository/vishwarepo1/</url>
+			<id>MyRepoUniqueName</id><!-- This id should match with the corresponding 
+				server element id provided in settings.xml file -->
+			<name>vishwarepository1</name>
+			<url>http://localhost:8081/repository/myrepo/</url>
 		</repository>
-	</distributionManagement> 
+	</distributionManagement>
 
 </project>
