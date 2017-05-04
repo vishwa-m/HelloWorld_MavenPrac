@@ -16,14 +16,12 @@ node{
     sh 'echo "I am going to a samp.txt file" > samp.txt'
     }*/
     
-    /*
-    // This stage is not required if we are building from Jenksfile. Because, while checking out the Jenkinsfile we will get the 
-    //project code too as Jenkinsfile is included in the project directory it self.
+    // This stage is required still we are building from Jenksfile. Because, while checking out the Jenkinsfile by the Jenkins job.. it will 
+    // Checkout only Jenkinsfile but not entire files.
     stage('stage-Checkout'){
     // Checkout the code from Git. Use 'git: Git' Sample step
         git credentialsId: 'git_vishwa-m', url: 'https://github.com/vishwa-m/MavenPrac_HelloWorld_Donot_Delete.git'
     }
-    */
     
     /*
     //This portion is commented as Maven configuration is defined in the beginning.
