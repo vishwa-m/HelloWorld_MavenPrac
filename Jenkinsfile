@@ -41,12 +41,12 @@ node{
     
     stage('stage-StaticCodeAnalysis'){
         //Maven clean. M3 is the name given for Maven installation in Global Tool Configuration
-        sh "${mvnhome}/bin/mvn clean"
+        sh "${mvnhome}/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.100.1:9000"
     }
     
     stage('stage-Maven-Compile'){
         //Compile code with Maven configured. M3 is the name given for Maven installation in Global Tool Configuration
-        sh "${mvnhome}/bin/mvn sonar:sonar"
+        sh "${mvnhome}/bin/mvn compile"
     }
     
     stage('stage-Maven-Test'){
