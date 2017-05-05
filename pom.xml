@@ -17,7 +17,7 @@
 	<profiles>
        	<!-- better to have keep this sonar profile in your maven settings.xml -->
       	<profile>
-            <id>sonar1</id>
+            <id>sonar</id>
             <activation>
               <activeByDefault>false</activeByDefault>
             </activation>
