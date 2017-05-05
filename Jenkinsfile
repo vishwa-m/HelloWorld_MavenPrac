@@ -39,9 +39,14 @@ node{
         sh "${mvnhome}/bin/mvn clean"
     }
     
+    stage('stage-StaticCodeAnalysis'){
+        //Maven clean. M3 is the name given for Maven installation in Global Tool Configuration
+        sh "${mvnhome}/bin/mvn clean"
+    }
+    
     stage('stage-Maven-Compile'){
         //Compile code with Maven configured. M3 is the name given for Maven installation in Global Tool Configuration
-        sh "${mvnhome}/bin/mvn compile"
+        sh "${mvnhome}/bin/mvn sonar:sonar"
     }
     
     stage('stage-Maven-Test'){
