@@ -13,7 +13,26 @@
 	<artifactId>${artifact_id}</artifactId>
 	<version>${version_name}</version>
 	<!-- <name>HelloWorldProject</name> -->
-
+	
+	<profiles>
+       	<!-- better to have keep this sonar profile in your maven settings.xml -->
+      	<profile>
+            <id>sonar1</id>
+            <activation>
+              <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                 <sonar.host.url>http://192.168.100.1:9000</sonar.host.url>
+                 <!-- 
+				 <sonar.jdbc.url>jdbc:derby://localhost:1527/sonar</sonar.jdbc.url> 
+                 <sonar.jdbc.driver>org.apache.derby.jdbc.ClientDriver</sonar.jdbc.driver>
+                 <sonar.jdbc.username>admin123</sonar.jdbc.username>
+                 <sonar.jdbc.password>admin123</sonar.jdbc.password>
+				 -->
+            </properties>
+       	</profile>
+	</profiles>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
