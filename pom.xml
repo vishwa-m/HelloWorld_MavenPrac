@@ -9,10 +9,15 @@
 	</properties>
 
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>Prac2</groupId>
+	<artifactId>HW_Maven</artifactId>
+	<version>1.0</version>
+	<!-- 
+	<name>HelloWorldProject</name> 
 	<groupId>${group_id}</groupId>
 	<artifactId>${artifact_id}</artifactId>
 	<version>${version_name}</version>
-	<!-- <name>HelloWorldProject</name> -->
+	-->
 	
 	<profiles>
        	<!-- better to have keep this sonar profile in your maven settings.xml -->
