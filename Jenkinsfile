@@ -68,4 +68,11 @@ node{
 		// archives the generated artifacts
 		archiveArtifacts '/target/*.jar'
 	}*/
+
+    stage('approve') {
+    	timeout(time: 1, unit: 'MINUTES') {
+        input message: 'Do you want to continue?'
+    }
+}
+	
 }
