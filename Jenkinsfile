@@ -55,12 +55,13 @@ node{
 	
 	
 	stage("Quality Gate"){
-	  timeout(time: 1, unit: 'HOURS') {
+	sleep time: 5, unit: 'MINUTES'
+	  //timeout(time: 1, unit: 'HOURS') {
 	      def qg = waitForQualityGate()
 	      if (qg.status != 'OK') {
 		  error "Pipeline aborted due to quality gate failure: ${qg.status}"
 	      }
-	  }
+	 // }
 	}
     
     stage('stage-Maven-Compile'){
