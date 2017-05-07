@@ -59,6 +59,7 @@ node{
 		  error "Pipeline aborted due to quality gate failure: ${qg.status}"
 	      }
 	  }
+	}
     
     stage('stage-Maven-Compile'){
         //Compile code with Maven configured. M3 is the name given for Maven installation in Global Tool Configuration
