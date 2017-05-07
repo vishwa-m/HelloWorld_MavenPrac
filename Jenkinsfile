@@ -64,8 +64,8 @@ node{
         sh "${mvnhome}/bin/mvn package"
     }
     
-	stage('stage-Artifacts_archival'){
+	/*stage('stage-Artifacts_archival'){
 		// archives the generated artifacts
 		archiveArtifacts '/target/*.jar'
-	}
+	}*/
 }
