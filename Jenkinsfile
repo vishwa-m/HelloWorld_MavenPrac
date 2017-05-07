@@ -47,8 +47,10 @@ node{
     }
     
     stage('stage-StaticCodeAnalysis'){
-        //Maven clean. M3 is the name given for Maven installation in Global Tool Configuration
-        sh "${mvnhome}/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.100.1:9000 -Dsonar.profile=vn_quality_profile1"
+	    withSonarQubeEnv('My SonarQube Server'){
+        	//Maven clean. M3 is the name given for Maven installation in Global Tool Configuration
+        	sh "${mvnhome}/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.100.1:9000 -Dsonar.profile=vn_quality_profile1"
+	    }
     }
 	
 	
