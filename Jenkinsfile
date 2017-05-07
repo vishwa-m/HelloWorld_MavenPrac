@@ -70,7 +70,7 @@ node{
 	}*/
 
     stage('approve') {
-    	timeout(time: 1, unit: 'MINUTES') {
+    	timeout(time: 15, unit: 'MINUTES') {
         input message: 'Do you want to continue?'
     }
 }
