@@ -85,10 +85,10 @@ node{
         sh "${mvnhome}/bin/mvn package"
     }
     
-	/*stage('stage-Artifacts_archival'){
-		// archives the generated artifacts
-		archiveArtifacts '/target/*.jar'
-	}*/
+    stage('stage-Artifacts_archival'){
+        // archives the generated artifacts
+	archiveArtifacts '**/target/*.jar'
+    }
 
     stage('approve') {
     	timeout(time: 15, unit: 'MINUTES') {
