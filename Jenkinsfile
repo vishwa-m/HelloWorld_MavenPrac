@@ -90,10 +90,10 @@ node{
 	archiveArtifacts '**/target/*.jar'
     }
 
-    stage('approve') {
+    /*stage('approve') {
     	timeout(time: 15, unit: 'MINUTES') {
         input message: 'Do you want to continue?'
-    }
+    }*/
 }
 	
 }
