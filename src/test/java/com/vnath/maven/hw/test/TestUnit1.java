@@ -20,6 +20,11 @@ public class TestUnit1 {
 		assertEquals(3, mhw.subtract(5, 2));
 	}
 	
+	@Test
+	public void unit1Test3(){
+		assertEquals(10, mhw.multiply(5, 2));
+	}
+	
 	
 	
 }
