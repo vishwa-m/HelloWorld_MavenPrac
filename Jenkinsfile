@@ -58,22 +58,22 @@ node{
         sh "${mvnhome}/bin/mvn test"
     }
     
-	stage('stage-StaticCodeAnalysis'){
-	    withSonarQubeEnv('sonarqube'){
-        	//Maven clean. M3 is the name given for Maven installation in Global Tool Configuration
-        	sh "${mvnhome}/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.100.1:9000 -Dsonar.profile=vn_quality_profile1"
-	    }
+    stage('stage-StaticCodeAnalysis'){
+         withSonarQubeEnv('sonarqube'){
+	 //Maven clean. M3 is the name given for Maven installation in Global Tool Configuration
+	 sh "${mvnhome}/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.100.1:9000 -Dsonar.profile=vn_quality_profile1"
+	 }
     }
 		
-	stage("Quality Gate"){
+    stage("Quality Gate"){
 	sleep time: 3, unit: 'MINUTES'
-	  timeout(time: 10, unit: 'MINUTES') {
-	      def qg = waitForQualityGate()
-	      if (qg.status != 'OK') {
-		  error "Pipeline aborted due to quality gate failure: ${qg.status}"
-	      }
-	  }
+        timeout(time: 10, unit: 'MINUTES') {
+	    def qg = waitForQualityGate()
+	    if (qg.status != 'OK') {
+	        error "Pipeline aborted due to quality gate failure: ${qg.status}"
+	    }
 	}
+     }
 	
     stage('stage-Test-Report'){
         //Generate test report
