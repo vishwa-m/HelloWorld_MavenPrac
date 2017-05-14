@@ -6,6 +6,7 @@
 		<artifact_id>HW_Maven</artifact_id>
 		<version_name>1.0</version_name>
 		<reports_plugin_version>2.10.4</reports_plugin_version>
+    		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<modelVersion>4.0.0</modelVersion>
