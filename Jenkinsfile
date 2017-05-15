@@ -56,7 +56,11 @@ node{
     stage('stage-Maven-Test'){
         //Test the compiled code with Maven test target.
         sh "${mvnhome}/bin/mvn test"
-        junit allowEmptyResults: true, healthScaleFactor: <object of type java.lang.Double>, testResults: '**/target/surefire-reports/*.xml'
+        post{
+        	always{
+        		junit "**/target/surefire-reports/*.xml"
+        	}
+        }
     }
     
     stage('stage-StaticCodeAnalysis'){
