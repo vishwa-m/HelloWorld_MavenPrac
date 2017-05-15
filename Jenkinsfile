@@ -56,12 +56,14 @@ node{
     stage('stage-Maven-Test'){
         //Test the compiled code with Maven test target.
         sh "${mvnhome}/bin/mvn test"
-        post{
+        
+    }
+    
+    post{
         	always{
         		junit "**/target/surefire-reports/*.xml"
         	}
         }
-    }
     
     stage('stage-StaticCodeAnalysis'){
          withSonarQubeEnv('sonarqube'){
