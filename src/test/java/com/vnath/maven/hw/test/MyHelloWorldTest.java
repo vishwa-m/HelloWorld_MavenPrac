@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import com.vnath.maven.hw.MyHelloWorld;
 
-public class TestUnit1 {
+public class MyHelloWorldTest {
 	
 	MyHelloWorld mhw=new MyHelloWorld();
 	
