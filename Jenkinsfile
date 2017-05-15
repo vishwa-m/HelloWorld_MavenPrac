@@ -56,7 +56,7 @@ node{
     stage('stage-Maven-Test'){
         //Test the compiled code with Maven test target.
         sh "${mvnhome}/bin/mvn test"
-        junit "**/target/surefire-reports/*.xml"
+        junit '**/target/surefire-reports/*.xml'
         
     }
     
