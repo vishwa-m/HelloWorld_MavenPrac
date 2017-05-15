@@ -56,6 +56,8 @@ node{
     stage('stage-Maven-Test'){
         //Test the compiled code with Maven test target.
         sh "${mvnhome}/bin/mvn test"
+        echo 'present working dir is:'
+        pwd()
         junit '**/target/surefire-reports/*.xml'
         
     }
