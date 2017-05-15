@@ -17,7 +17,7 @@ public class TestUnit1 {
 	
 	@Test
 	public void unit1Test2(){
-		assertEquals(3, mhw.subtract(5, 2));
+		assertEquals(3, mhw.subtract(3, 2));
 	}
 	
 	@Test
