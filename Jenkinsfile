@@ -53,11 +53,16 @@ node{
         sh "${mvnhome}/bin/mvn compile"
     }
     
-    stage('stage-Maven-Test'){
-        //Test the compiled code with Maven test target.
+    stage('stage-Maven-UnitTests'){
+        //Unit test the compiled code with Maven test target.
         sh "${mvnhome}/bin/mvn test -DtestFailureIgnore=true"
         
         //junit '**/target/surefire-reports/*.xml'
+    }
+    
+    stage('stage-Maven-IntegrationTests'){
+        //Integration test the compiled code with Maven integration-test target.
+        sh "${mvnhome}/bin/mvn integration-test"
     }
     
     stage('stage-StaticCodeAnalysis'){
