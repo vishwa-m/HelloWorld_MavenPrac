@@ -103,4 +103,8 @@ node{
     	}
 	}*/
 	
+	stage('stage-Upload-Artifact'){
+		sh "${mvnhome}/bin/mvn deploy:deploy"
+	}
+	
 }
